@@ -1,11 +1,12 @@
 <button 
-(click)="submit()" 
-[class]="'btn' + variant" 
-[disabled]="disabled">
-    
+
+    (click)="submit()" 
+    [class]="'btn ' + variant"
+    [disabled]="disabled"
+>
     @if(!loading){
-        {{btnText}}
+        {{ btnText }}
     }@else {
-        carregando..
-    } <!-- novidade no angular -->
-</button>
+        carregando...
+    }
+</button><!-- função é parenteses e variável colchetes -->

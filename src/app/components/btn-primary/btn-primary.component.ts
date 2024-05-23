@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter, input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 type BtnVariants = "primary" | "secondary";
 
 @Component({
-  selector: 'app-btn-primary',
+  selector: 'btn-primary',
   standalone: true,
   imports: [
     CommonModule
@@ -17,8 +17,9 @@ export class BtnPrimaryComponent {
   @Input() disabled: boolean = false;
   @Input() loading: boolean = false;
   @Input() variant: BtnVariants = "primary";
+
   @Output("submit") onSubmit = new EventEmitter();
-  
+
   submit(){
     this.onSubmit.emit();
   }
